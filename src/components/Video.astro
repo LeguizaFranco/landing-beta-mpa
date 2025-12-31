@@ -67,24 +67,38 @@ import { Lock } from "@lucide/astro";
                         playsinline
                         preload="none"
                         style="z-index:1"
+                        controls
                     >
-                        <source src="/demo.webm" type="video/mp4" />
+                      
+                        <source src="/demo.webm" type="video/webm" />
                         Tu navegador no soporta la reproducción de video.
                     </video>
                     <script type="text/javascript" is:inline>
+                        // Detecta iOS
+                        function isIOS() {
+                            return (
+                                /iPad|iPhone|iPod/.test(navigator.userAgent) &&
+                                !window.MSStream
+                            );
+                        }
                         const btn = document.getElementById("customPlayBtn");
                         const video = document.getElementById("demoVideo");
-                        btn.addEventListener("click", () => {
+                        if (isIOS()) {
                             btn.style.display = "none";
                             video.setAttribute("controls", "controls");
-                            video.play();
-                        });
-                        video.addEventListener("pause", () => {
-                            if (video.currentTime === 0 || video.ended) {
-                                btn.style.display = "";
-                                video.removeAttribute("controls");
-                            }
-                        });
+                        } else {
+                            btn.addEventListener("click", () => {
+                                btn.style.display = "none";
+                                video.setAttribute("controls", "controls");
+                                video.play();
+                            });
+                            video.addEventListener("pause", () => {
+                                if (video.currentTime === 0 || video.ended) {
+                                    btn.style.display = "";
+                                    video.removeAttribute("controls");
+                                }
+                            });
+                        }
                     </script>
                 </div>
             </div>
