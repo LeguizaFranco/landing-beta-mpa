@@ -1,13 +1,82 @@
+---
+import "../styles/global.css";
+---
+
 <!doctype html>
 <html lang="en">
 	<head>
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+		<link rel="icon" type="image/svg+xml" href="/logo.webp" />
 		<meta name="generator" content={Astro.generator} />
-		<title>Astro Basics</title>
+
+		<!-- Google Fonts -->
+		<link
+			href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap"
+			rel="stylesheet"
+		/>
+
+		<!-- --- SEO PRINCIPAL --- -->
+		<title>MPA Inmobiliario y Portal para Martilleros en Argentina</title>
+		<meta
+			name="description"
+			content="Potencia tu inmobiliaria con MPA. La plataforma de gestión (CRM) y portal exclusivo para inmobiliarias matriculadas."
+		/>
+		<meta
+			name="keywords"
+			content="CRM inmobiliario, sistema para inmobiliarias, martilleros públicos, software inmobiliario argentina, portal propiedades, gestión inmobiliaria, Tandil Solution, MPA"
+		/>
+		<meta name="author" content="Tandil Solution" />
+		<meta name="robots" content="index, follow" />
+		<meta name="theme-color" content="#1d4ed8" />
+		<!-- Color azul de MPA en la barra del navegador móvil -->
+
+		<!-- --- CANONICAL URL (IMPORTANTE: Cambiar por tu dominio real) --- -->
+		<link rel="canonical" href="https://www.mipropiedadargentina.com.ar/" />
+
+		<!-- --- OPEN GRAPH (Para WhatsApp, Facebook, LinkedIn) --- -->
+		<meta property="og:type" content="website" />
+		<meta property="og:url" content="https://www.mipropiedadargentina.com.ar/" />
+		<meta
+			property="og:title"
+			content="MPA - Profesionaliza tu Inmobiliaria"
+		/>
+		<meta
+			property="og:description"
+			content="Acceso anticipado al primer ecosistema digital exclusivo para martilleros. Gestión, CRM y Portal en un solo lugar."
+		/>
+		<meta property="og:image" content="/logo.webp" />
+		<!-- Imagen de vista previa (1200x630 recomendado) -->
+		<meta property="og:locale" content="es_AR" />
+		<meta property="og:site_name" content="MPA - Mi Propiedad Argentina" />
+
+		<!-- --- DATOS ESTRUCTURADOS (JSON-LD) --- -->
+		<!-- Esto ayuda a Google a entender que es una Aplicación de Software -->
+		<script type="application/ld+json">
+			{
+				"@context": "https://schema.org",
+				"@type": "SoftwareApplication",
+				"name": "MPA - Mi Propiedad Argentina",
+				"applicationCategory": "BusinessApplication",
+				"operatingSystem": "Web",
+				"offers": {
+					"@type": "Offer",
+					"price": "0",
+					"priceCurrency": "ARS",
+					"description": "Pre-lanzamiento con acceso anticipado"
+				},
+				"description": "Plataforma integral de gestión inmobiliaria y portal de propiedades exclusivo para martilleros públicos en Argentina.",
+				"author": {
+					"@type": "Organization",
+					"name": "Tandil Solution",
+					"url": "https://www.tandilsolution.app"
+				}
+			}
+		</script>
 	</head>
-	<body>
+	<body
+		class="bg-white font-sans text-slate-900 selection:bg-blue-100 selection:text-blue-900"
+	>
 		<slot />
 	</body>
 </html>
@@ -18,5 +87,21 @@
 		margin: 0;
 		width: 100%;
 		height: 100%;
+		font-family: "Inter", sans-serif;
+	}
+
+	/* Animaciones personalizadas si son necesarias */
+	.fade-in {
+		animation: fadeIn 0.5s ease-in-out;
+	}
+	@keyframes fadeIn {
+		from {
+			opacity: 0;
+			transform: translateY(10px);
+		}
+		to {
+			opacity: 1;
+			transform: translateY(0);
+		}
 	}
 </style>

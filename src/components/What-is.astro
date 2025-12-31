@@ -1,0 +1,143 @@
+---
+import {
+    Smartphone,
+    ShieldCheck,
+    ChartColumn,
+    Bot,
+    CircleCheck,
+} from "@lucide/astro";
+---
+
+<!-- --- WHAT IS MPA --- -->
+<section id="que-es" class="py-24 bg-slate-100">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="lg:grid lg:grid-cols-2 lg:gap-16 items-center">
+            <!-- Left Content: Cards -->
+            <div class="mb-10 lg:mb-0 relative">
+                <div
+                    class="absolute inset-0 bg-linear-to-tr from-blue-600 to-cyan-400 rounded-2xl transform rotate-3 scale-105 opacity-20 blur-lg"
+                >
+                </div>
+                <div
+                    class="relative bg-white p-8 rounded-2xl shadow-xl border border-slate-200"
+                >
+                    <!-- Feature 1 -->
+                    <div class="flex items-start gap-4 mb-6">
+                        <div
+                            class="p-3 bg-blue-100 text-blue-700 rounded-lg shrink-0"
+                        >
+                            <ChartColumn />
+                        </div>
+                        <div>
+                            <h3 class="text-xl font-bold text-slate-900">
+                                Gestor interno (CRM)
+                            </h3>
+                            <p class="text-slate-500 text-base mt-1">
+                                Control total de tu cartera y métricas en tiempo
+                                real.
+                            </p>
+                        </div>
+                    </div>
+                    <!-- Feature 2 -->
+                    <div class="flex items-start gap-4 mb-6">
+                        <div
+                            class="p-3 bg-blue-100 text-blue-700 rounded-lg shrink-0"
+                        >
+                            <ShieldCheck />
+                        </div>
+                        <div>
+                            <h3 class="text-xl font-bold text-slate-900">
+                                Maximización de visualizaciones
+                            </h3>
+                            <p class="text-slate-500 text-base mt-1">
+                                Sello de calidad exclusivo para martilleros
+                                matriculados.
+                            </p>
+                        </div>
+                    </div>
+                    <!-- Feature 3 -->
+                    <div class="flex items-start gap-4 mb-6">
+                        <div
+                            class="p-3 bg-blue-100 text-blue-700 rounded-lg shrink-0"
+                        >
+                            <Smartphone />
+                        </div>
+                        <div>
+                            <h3 class="text-xl font-bold text-slate-900">
+                                Mobile First
+                            </h3>
+                            <p class="text-slate-500 text-base mt-1">
+                                Tu cartera disponible en cualquier dispositivo.
+                            </p>
+                        </div>
+                    </div>
+                    <!-- Feature 4 -->
+                    <div class="flex items-start gap-4">
+                        <div
+                            class="p-3 bg-blue-100 text-blue-700 rounded-lg shrink-0"
+                        >
+                            <Bot />
+                        </div>
+                        <div>
+                            <h3 class="text-xl font-bold text-slate-900">
+                                IA integrada
+                            </h3>
+                            <p class="text-slate-500 text-base mt-1">
+                                Asistente inteligente para descripciones y
+                                respuestas automáticas.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Right Content: Text -->
+            <div>
+                <h2 class="text-3xl font-bold text-slate-900 mb-6">
+                    Más que un portal, una herramienta de gestión.
+                </h2>
+                <div
+                    class="text-slate-600 text-lg mb-6 leading-relaxed space-y-4"
+                >
+                    <p>
+                        El mercado inmobiliario argentino está fragmentado y
+                        carece de espacios digitales realmente profesionales. Mi
+                        Propiedad Argentina (MPA) nace para unificar la oferta
+                        inmobiliaria en un entorno confiable, claro y orientado
+                        a resultados.
+                    </p>
+                    <p>
+                        No competimos por clics vacíos. Diseñamos una plataforma
+                        pensada para ordenar, transparentar y potenciar tu
+                        operación diaria, <strong
+                            >brindándote herramientas digitales</strong
+                        > que optimizan tu tiempo y aumentan tus oportunidades de
+                        cierre.
+                    </p>
+                </div>
+
+                <ul class="space-y-4 mt-8">
+                    <li
+                        class="flex items-center gap-3 text-slate-700 font-medium"
+                    >
+                        <CircleCheck class="w-5 h-5 text-blue-600 shrink-0" />
+                        Validación de matrícula para garantizar profesionalismo.
+                    </li>
+                    <li
+                        class="flex items-center gap-3 text-slate-700 font-medium"
+                    >
+                        <CircleCheck class="w-5 h-5 text-blue-600 shrink-0" />
+                        Reportes automáticos de rendimiento
+                        para tomar decisiones basadas en datos.
+                    </li>
+                    <li
+                        class="flex items-center gap-3 text-slate-700 font-medium"
+                    >
+                        <CircleCheck class="w-5 h-5 text-blue-600 shrink-0" />
+                        Interfaz limpia, sin publicidad invasiva.
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</section>

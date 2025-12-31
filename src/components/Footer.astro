@@ -1,0 +1,119 @@
+---
+import {
+    Building2,
+    Facebook,
+    Globe,
+    Instagram,
+    Linkedin,
+    Twitter,
+} from "@lucide/astro";
+
+const date = new Date();
+const year = date.getFullYear();
+---
+
+<!-- --- FOOTER --- -->
+<footer class="bg-slate-900 border-t border-slate-800 py-12 text-slate-400">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div
+            class="flex flex-col md:flex-row justify-between items-center gap-8"
+        >
+            <!-- MPA Side (Brand & Socials) -->
+            <div class="flex flex-col items-center md:items-start gap-4">
+                <div class="flex items-center gap-2">
+                    <div class="bg-blue-700 text-white p-1 rounded">
+                        <Building2 />
+                    </div>
+                    <span class="font-bold text-white text-lg">MPA</span>
+                </div>
+                <p
+                    class="text-sm text-slate-500 max-w-xs text-center md:text-left"
+                >
+                    La nueva era del mercado inmobiliario en Argentina.
+                </p>
+
+                <!-- Socials MPA -->
+                <div class="flex gap-4 mt-2">
+                    <a
+                        href="https://www.instagram.com/mipropiedad.arg/?hl=es-la"
+                        rel="noopener noreferrer"
+                        target="_blank"
+                        class="w-7 h-7 rounded-full bg-slate-800 flex items-center justify-center hover:bg-blue-600 hover:text-white transition-all duration-300"
+                        aria-label="Instagram MPA"
+                    >
+                        <Instagram class="w-7 h-7" />
+                    </a>
+                    <a
+                        href="https://www.facebook.com/profile.php?id=61578499182847"
+                        rel="noopener noreferrer"
+                        target="_blank"
+                        class="w-7 h-7 rounded-full bg-slate-800 flex items-center justify-center hover:bg-blue-600 hover:text-white transition-all duration-300"
+                        aria-label="Facebook MPA"
+                    >
+                        <Facebook class="w-7 h-7" />
+                    </a>
+                </div>
+            </div>
+
+            <!-- Divider for mobile only -->
+            <div class="w-full h-px bg-slate-800 md:hidden"></div>
+
+            <!-- Tandil Solution Side (Credits & Socials) -->
+            <div
+                class="text-center md:text-right flex flex-col items-center md:items-end gap-3"
+            >
+                <p class="text-sm">
+                    Desarrollado por <a
+                        href="https://tandilsolution.app"
+                        rel="noopener noreferrer"
+                        target="_blank"
+                        class="text-white font-bold hover:text-blue-400 transition-colors"
+                        >Tandil Solution</a
+                    >.
+                </p>
+
+                <!-- Socials Tandil Solution -->
+                <div
+                    class="flex items-center gap-3 bg-slate-800/50 py-1.5 px-3 rounded-full border border-slate-700/50"
+                >
+                    <span class="text-xs text-slate-500 font-medium"
+                        >Siguenos:</span
+                    >
+                    <div class="h-3 w-px bg-slate-700"></div>
+                    <a
+                        href="https://www.instagram.com/tandil.solution/?hl=es-la"
+                        rel="noopener noreferrer"
+                        target="_blank"
+                        class="hover:text-blue-400 transition-colors"
+                        aria-label="Instagram Tandil Solution"
+                    >
+                        <Instagram />
+                    </a>
+                    <a
+                        href="https://tandilsolution.app"
+                        rel="noopener noreferrer"
+                        target="_blank"
+                        class="hover:text-blue-400 transition-colors"
+                        aria-label="Web Tandil Solution"
+                    >
+                        <Globe />
+                    </a>
+                    <a
+                        href="https://www.linkedin.com/in/tandilsolution/"
+                        rel="noopener noreferrer"
+                        target="_blank"
+                        class="hover:text-blue-400 transition-colors"
+                        aria-label="Twitter Tandil Solution"
+                    >
+                        <Linkedin />
+                    </a>
+                </div>
+
+                <p class="text-xs text-slate-600 mt-2">
+                    © <span>{year}</span> Mi Propiedad Argentina. Todos los derechos
+                    reservados.
+                </p>
+            </div>
+        </div>
+    </div>
+</footer>

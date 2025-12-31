@@ -1,0 +1,105 @@
+---
+import {
+    Building2,
+    ChevronRight,
+    ShieldCheck,
+    TrendingUp,
+} from "@lucide/astro";
+import { Image } from "astro:assets";
+---
+
+<!-- --- HERO SECTION --- -->
+<section class="relative pt-32 pb-20 lg:pt-48 lg:pb-40 overflow-hidden">
+    <!-- Background Image with Overlay -->
+    <div class="absolute inset-0 z-0">
+        <Image
+            src={"/1.webp"}
+            alt="Modern Architecture Building"
+            width={1920}
+            height={1080}
+            class="w-full h-full object-cover"
+            loading="eager"
+        />
+        <!-- <img
+            src="/1.webp"
+            alt="Modern Architecture Building"
+            class="w-full h-full object-cover"
+            loading="lazy"
+        /> -->
+        <!-- Overlays -->
+        <div
+            class="absolute inset-0 bg-linear-to-tr from-white via-white/90 to-white/60 sm:to-white/20"
+        >
+        </div>
+        <div class="absolute inset-0 bg-blue-900/5 mix-blend-multiply"></div>
+    </div>
+
+    <div
+        class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center sm:text-left"
+    >
+        <!-- Badge -->
+        <div
+            class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-blue-100/80 backdrop-blur-sm text-blue-800 text-sm font-semibold mb-8 border border-blue-200 shadow-sm"
+        >
+            <span class="relative flex h-2 w-2">
+                <span
+                    class="animate-ping absolute inline-flex h-full w-full rounded-full bg-blue-400 opacity-75"
+                ></span>
+                <span
+                    class="relative inline-flex rounded-full h-2 w-2 bg-blue-600"
+                ></span>
+            </span>
+            Desarrollado por Tandil Solution
+        </div>
+
+        <h1
+            class="text-4xl sm:text-5xl lg:text-7xl font-semibold text-slate-900 tracking-tight mb-6 max-w-4xl"
+        >
+            La plataforma que <br class="hidden lg:block" />
+            <span
+                class="text-transparent bg-clip-text bg-linear-to-tr from-blue-700 to-blue-500"
+            >
+                profesionaliza tu inmobiliaria
+            </span>
+        </h1>
+
+        <p
+            class="max-w-2xl text-lg sm:text-xl text-slate-700 mb-10 leading-relaxed font-medium"
+        >
+            MPA combina la excelencia académica con la tecnología moderna. La
+            primera plataforma diseñada exclusivamente para martilleros que
+            buscan transparencia y crecimiento digital real.
+        </p>
+
+        <div class="flex flex-col sm:flex-row items-center gap-4">
+            <a
+                href="#registro"
+                class="w-full sm:w-auto px-8 py-4 bg-blue-700 text-white rounded-xl font-bold text-lg hover:bg-blue-800 transition-all shadow-xl shadow-blue-700/30 flex items-center justify-center gap-2"
+            >
+                Unirme al Pre-lanzamiento
+                <ChevronRight />
+            </a>
+            <a
+                href="#que-es"
+                class="w-full sm:w-auto px-8 py-4 bg-white/80 backdrop-blur-sm text-slate-700 border border-slate-200 rounded-xl font-bold text-lg hover:bg-white transition-all flex items-center justify-center shadow-lg shadow-slate-200/50"
+            >
+                Saber más
+            </a>
+        </div>
+
+        <div
+            class="mt-12 pt-8 border-t border-slate-200/50 flex flex-wrap gap-8 text-slate-500 font-medium justify-center sm:justify-start"
+        >
+            <div class="flex items-center gap-2">
+                <Building2 class="w-5 h-5 text-blue-600" />
+                Inmobiliarias
+            </div>
+            <div class="flex items-center gap-2">
+                <ShieldCheck class="w-5 h-5 text-blue-600" /> Martilleros
+            </div>
+            <div class="flex items-center gap-2">
+                <TrendingUp class="w-5 h-5 text-blue-600" /> Maximiza tus ingresos
+            </div>
+        </div>
+    </div>
+</section>
