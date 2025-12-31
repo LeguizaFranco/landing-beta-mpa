@@ -115,7 +115,7 @@ import { Image } from "astro:assets";
                 </div>
 
                 <!-- The Form -->
-                <div name="contact" class="max-w-md mx-auto w-full">
+                <div id="form-view" class="max-w-md mx-auto w-full">
                     <div class="mb-8">
                         <h3 class="text-2xl font-bold text-slate-900">
                             Completa tu perfil
@@ -126,6 +126,7 @@ import { Image } from "astro:assets";
                     </div>
 
                     <form
+                        name="contact"
                         method="POST"
                         data-netlify="true"
                         netlify-honeypot="bot-field"
